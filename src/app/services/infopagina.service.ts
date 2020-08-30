@@ -25,13 +25,10 @@ export class InfopaginaService {
 
    // tslint:disable-next-line: typedef
    private cargarCategoria() {
-
     // Leer el archivo JSON
     this.http.get('assets/data/data-pagina.json')
     .subscribe( (resp: any[]) => {
-      console.log(resp);
       this.categoria = Object.values(resp);
-      console.log(this.categoria[9]);
       // console.log(resp);
     });
 
