@@ -1,0 +1,19 @@
+{
+    "title": "Portafolio",
+    "email": "gaticora@gmail.com",
+    "nombre_corto": "Gustavo ticora",
+    "Pagina_Autor": "https://gustavoticora.com",
+    "facebook": "https://www.facebook.com",
+    "twitter": "https://www.twitter.com",
+    "instagram": "https://www.instagram.com",
+    "tumblr": "https://www.tumblr.com",
+    "equipo_trabajo": [],
+    "cat" : [
+        "science", 
+        "education",
+        "people", 
+        "feelings",
+        "computer", 
+        "building"
+    ]
+}
