@@ -10,7 +10,7 @@ const app_routes: Routes = [
     { path: 'about', component: AboutComponent},
     { path: 'item', component: ItemComponent},
     { path: 'search/:termino', component: SearchComponent},
-    { path: '**', pathMatch: 'full', redirectTo: ''}
+    { path: '**', pathMatch: 'full', component: PortafolioComponent}
 ];
 
 @NgModule({

@@ -8,14 +8,13 @@ import { ImagenesService } from '../../services/imagenes.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-
   constructor( private route: ActivatedRoute,
                public imagenesService: ImagenesService ) { }
 
   ngOnInit(): void {
     this.route.params
       .subscribe( params => {
-        this.imagenesService.buscarImagenes( params.termino );
+       this.imagenesService.buscarImagenes( params.termino );
       });
 
   }

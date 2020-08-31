@@ -24,14 +24,19 @@
         <p>Espere por favor</p>
       </div>
       <div class="au-xs-ta-center au-lg-ta-left">
-        <label for="validationTooltip02">Categoria</label>
-            <select class="custom-select" (change)="buscarCategoria($event)">
+        <ul class="rk-menu rk-categories-menu">
+          <li class="rk-menu__item">Categorias:
+          </li>
+          <li class="rk-menu__item">
+            <select (change)="buscarCategoria($event)">
               <option value="">Todas</option>
               <option *ngFor="let category of infoPagina.categoria[9]" value="{{ category }}">{{ category }}</option>          
             </select>
+          </li>
+        </ul>
       </div>
       <div *ngIf="!imagenesService.cargando && !imagenesService.tipo" class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4">
-        <a *ngFor="let img of imagenesService.imagenes[2]" routerLink="/item" class="rk-item ae-masonry__item">
+        <a *ngFor="let img of imagenesService.imagenes[2]" routerLink="" class="rk-item ae-masonry__item">
           <img src="{{ img.largeImageURL }}" alt="">
           <div class="item-meta">
             <p><b>Visitas : {{ img.views }}</b></p>
@@ -41,7 +46,7 @@
         </a>
       </div>
       <div *ngIf="!imagenesService.cargando && imagenesService.tipo" class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4">
-        <a *ngFor="let img of imagenesService.imagenesfcate[2]" routerLink="/item" class="rk-item ae-masonry__item">
+        <a *ngFor="let img of imagenesService.imagenesfcate[2]" routerLink="" class="rk-item ae-masonry__item">
           <img src="{{ img.largeImageURL }}" alt="">
           <div class="item-meta">
             <p><b>Visitas : {{ img.views }}</b></p>

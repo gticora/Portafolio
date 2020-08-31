@@ -9,7 +9,7 @@ export class InfopaginaService {
   info: InfoPagina = {};
   categoria: any[] = [];
   cargada = false;
-  constructor( private http: HttpClient ) { 
+  constructor( private http: HttpClient ) {
     this.cargarInfo();
     this.cargarCategoria();
   }

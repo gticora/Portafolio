@@ -9,9 +9,11 @@ export class ImagenesService {
 
   cargando = true;
   tipo = true;
+  cant: number;
   imagenes: Imagenes[] = [];
   imagenesfiltrado: Imagenes[] = [];
   imagenesfcate: Imagenes[] = [];
+  valida: Imagenes[];
   constructor( private http: HttpClient) {
     this.cargarImagen();
 
@@ -44,6 +46,8 @@ export class ImagenesService {
     this.http.get('https://pixabay.com/api/?key=13119377-fc7e10c6305a7de49da6ecb25' + '&q=' + termino)
     .subscribe( (resp: Imagenes[]) => {
       this.imagenesfiltrado = Object.values(resp);
+      this.valida = Object.values(this.imagenesfiltrado[2]);
+      this.cant = this.valida.length;
     });
   }
 }
